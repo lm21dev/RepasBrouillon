@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Aliment } from './classes/aliment';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RepasBrouillon';
+  aliments: Aliment[] = [];
+
+  onClickAdd(event: any): void{
+    this.aliments.push(event.aliment);
+  }
 }

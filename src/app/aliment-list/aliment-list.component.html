@@ -1,0 +1,17 @@
+
+<table class="table table-hover table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Aliment</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let item of alimentsAffiche; let i =index'>
+            <td>
+                <label>{{item.libelle}}</label>    
+            </td>
+            <td><button class="btn btn-primary btn-block" (click)=onAddClick(i)>Ajouter</button></td>
+        </tr>   
+    </tbody>    
+</table>

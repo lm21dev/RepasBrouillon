@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <input class="form-control" type="text" [(ngModel)]="data"/>
+            <button class="btn btn-primary col-3"
+                (click)="display=!display" style="margin-top: 50px;"
+                > 
+                Switch
+            </button>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-12">
+            <app-cycle-item *ngIf="display" [data]='data' appSurligner>
+               {{data}}
+            </app-cycle-item>
+        </div>
+
+    </div>
+</div> 
